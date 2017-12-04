@@ -1,0 +1,23 @@
+#define LOCALE_OFFSET 100
+#define RETURN_SUCCESS 0
+#define RETURN_FAIL -1
+#define LOCALE_ENGLISH LOCALE_OFFSET+1
+#define LOCALE_FRENCH LOCALE_OFFSET+2
+#define LOCALE_GERMAN LOCALE_OFFSET+3
+#define LOCALE_FINNISH LOCALE_OFFSET+4
+#define LOCALE_SWEDISH LOCALE_OFFSET+5
+#define LOCALE_SPANISH LOCALE_OFFSET+6
+#define LOCALE_DUTCH LOCALE_OFFSET+7
+#define LOCALE_DANISH LOCALE_OFFSET+8
+#define LOCALE_ITALIAN LOCALE_OFFSET+9
+#define LOCALE_NORWEGIAN LOCALE_OFFSET+10
+#define LOCALE_PORTUGUESE LOCALE_OFFSET+11
+#define LOCALE_RUSSIAN LOCALE_OFFSET+12
+
+class TStemm : public V_Stemm {
+}
+
+string ptr TStemm::doStemming(string ptr src, string ptr dest, int ptr loc) {
+    Stem(src, dest, loc);
+    return dest;
+}
